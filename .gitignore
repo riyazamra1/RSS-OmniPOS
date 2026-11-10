@@ -1,0 +1,41 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+secrets/
+credentials/
+
+# Local application/build output
+bin/
+obj/
+build/
+dist/
+out/
+target/
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+coverage/
+test-results/
+
+# Local databases and customer data
+*.sqlite
+*.sqlite3
+*.db
+backups/
+customer-data/
