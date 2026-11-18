@@ -26,7 +26,14 @@ jobs:
           test -s SECURITY.md
           test -s docs/PROJECT-OVERVIEW.md
           test -s docs/SYSTEM-ARCHITECTURE.md
+          test -s docs/TECHNOLOGY-STACK.md
+          test -s docs/DATABASE-ARCHITECTURE.md
+          test -s docs/API-ARCHITECTURE.md
+          test -s docs/OFFLINE-SYNC-ARCHITECTURE.md
+          test -s docs/LICENSING-ARCHITECTURE.md
+          test -s docs/DEPLOYMENT-ARCHITECTURE.md
           test -s docs/SECURITY-ARCHITECTURE.md
+          test -s .github/dependabot.yml
 
       - name: Check for commonly named secret files
         shell: bash

@@ -4,6 +4,18 @@ RSS OmniPOS is a point-of-sale and business-management platform being developed 
 
 > **Project status:** Specification and architecture planning. This repository scaffold does not indicate that application code, production services, or deployments are complete.
 
+## Current website locations
+
+The system will be completed and tested on the existing RSS website before a separate customer domain is purchased.
+
+- **Temporary public website:** https://rssapps.net/accounts/OmniPOS
+- **Private administration portal:** https://rssapps.net/accounts/OmniPOS/admin
+- **Future customer domain:** To be purchased and configured after the system is completed.
+
+The public website and administration portal are distinct access surfaces. The admin path must require authenticated administrator access and backend-enforced authorization. Do not treat a hidden route or client-side navigation guard as a security boundary.
+
+Domain names and base paths must be configurable by environment. Do not hardcode the temporary website URL into business logic, API authorization or persisted customer records. Future domain migration must not require rewriting core application logic.
+
 ## Project goals
 
 The planned platform covers:
@@ -19,8 +31,6 @@ The planned platform covers:
 - Offline transaction capture and controlled synchronization
 - Licensing, device entitlements and business administration
 
-The detailed scope and implementation sequence remain subject to specification review and approval.
-
 ## Architecture principles
 
 - Native Android application; do not use a WebView wrapper as a substitute for a native client.
@@ -30,6 +40,7 @@ The detailed scope and implementation sequence remain subject to specification r
 - Keep business, branch, warehouse, terminal and user scopes explicit.
 - Treat offline operations as a synchronization problem with conflict and duplicate protection.
 - Keep secrets, customer data and proprietary source out of public repository content.
+- Keep the public website, administrator interface and future customer portal access policies separate.
 
 ## Commercial decisions currently established
 
@@ -53,6 +64,12 @@ Encryption format, key custody, key rotation, recovery, protected build executio
 
 - [Project overview](docs/PROJECT-OVERVIEW.md)
 - [System architecture](docs/SYSTEM-ARCHITECTURE.md)
+- [Technology stack](docs/TECHNOLOGY-STACK.md)
+- [Database architecture](docs/DATABASE-ARCHITECTURE.md)
+- [API architecture](docs/API-ARCHITECTURE.md)
+- [Offline synchronization](docs/OFFLINE-SYNC-ARCHITECTURE.md)
+- [Licensing architecture](docs/LICENSING-ARCHITECTURE.md)
+- [Deployment architecture](docs/DEPLOYMENT-ARCHITECTURE.md)
 - [Security architecture](docs/SECURITY-ARCHITECTURE.md)
 - [Repository contribution rules](CONTRIBUTING.md)
 - [Security reporting](SECURITY.md)
